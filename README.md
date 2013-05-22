@@ -21,7 +21,6 @@ app/config/bootstrap/app.php
             // smbのマウントポイント
             'dir_top' => '/Users/yours/Volumes/fileshare',
             // smbのURL
-
             'dir_top_link' => 'smb://windows.domain.local/fileshare'
         ]
     );
