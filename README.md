@@ -11,21 +11,17 @@ smbをmacにマウントしてその設定をapp/config/bootstrap/app.php
 $ mkdir /Users/yours/Volumes/file02
 $ mount_smbfs //username@example.com　/Users/yours/Volumes/file02
 
-例：
+Setting
 --------
 
-Environment::set('production',
+app/config/bootstrap/app.php
 
-    [
+    Environment::set('production',
+        [
+            // smbのマウントポイント
+            'dir_top' => '/Users/yours/Volumes/fileshare',
+            // smbのURL
 
-        // smbのマウントポイント
-
-        'dir_top' => '/Users/yours/Volumes/fileshare',
-
-        // smbのURL
-
-        'dir_top_link' => 'smb://windows.domain.local/fileshare'
-
-    ]
-
-);
+            'dir_top_link' => 'smb://windows.domain.local/fileshare'
+        ]
+    );
