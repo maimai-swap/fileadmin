@@ -13,11 +13,19 @@ $ mount_smbfs //username@example.com　/Users/yours/Volumes/file02
 
 例：
 --------
+
 Environment::set('production',
+
     [
+
         // smbのマウントポイント
+
         'dir_top' => '/Users/yours/Volumes/fileshare',
+
         // smbのURL
+
         'dir_top_link' => 'smb://windows.domain.local/fileshare'
+
     ]
+
 );
